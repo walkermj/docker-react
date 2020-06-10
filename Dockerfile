@@ -11,4 +11,4 @@ RUN npm run build
 FROM nginx
 EXPOSE 80
 # copy from builder phase and move static content to folder that nginx wants
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=0 /app/build /usr/share/nginx/html
